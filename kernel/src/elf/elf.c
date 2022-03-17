@@ -37,9 +37,13 @@ uint32_t loader()
 		if (ph->p_type == PT_LOAD)
 		{
 
-			// remove this panic!!!
-			panic("Please implement the loader");
-
+		    for (uint32_t i = 0; i < ph->p_memsz; i++) {
+		        if (i < ph->filesz) {
+		            paddr_write(p_vaddr + i, 1, paddr_read(ph->p_offset + i, 1));
+		        } else {
+		            paddr_write(p_vaddr + i, 1, 0);
+		        }
+		    }
 /* TODO: copy the segment from the ELF file to its proper memory area */
 
 /* TODO: zeror the memory area [vaddr + file_sz, vaddr + mem_sz) */
