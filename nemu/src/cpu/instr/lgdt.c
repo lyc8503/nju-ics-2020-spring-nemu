@@ -12,7 +12,7 @@ make_instr_func(lgdt_instr) {
     m.data_size = data_size;
     int len = modrm_rm(&m);
 
-    operand_read(&m);
+    operand_read(cpu.eip + 1, &m);
 
 //    cpu.gdtr.limit = paddr_read(cpu.eip + 1, 2);
 //    cpu.gdtr.base = paddr_read(cpu.eip + 3, 4);
