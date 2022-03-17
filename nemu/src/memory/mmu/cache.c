@@ -41,7 +41,6 @@ void init_cache() {
 
 // write data to cache
 void cache_write(paddr_t paddr, size_t len, uint32_t data) {
-
     trace_cache("write paddr %x len %d data %x", paddr, len, data);
 
     assert(len == 1 || len == 2 || len == 4);
