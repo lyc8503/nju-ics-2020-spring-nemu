@@ -4,7 +4,7 @@
 // #define NEMU_REF_INSTR
 
 // PA 3
- #define CACHE_ENABLED
+#define CACHE_ENABLED
 //#define IA32_SEG             // protect mode enable
 //#define IA32_PAGE            // virtual memory management is now complete
 //#define TLB_ENABLED
