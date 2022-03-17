@@ -19,7 +19,7 @@ void load_sreg(uint8_t sreg)
 	SegReg *reg = &cpu.segReg[sreg];
 	SegDesc seg;
 
-	printf("load sreg index %d\n", reg->index);
+	printf("cpu.gdtr.base %x\n", cpu.gdtr.base);
 
 	seg.val[0] = paddr_read(cpu.gdtr.base + reg->index * 8, 4);
 	seg.val[1] = paddr_read(cpu.gdtr.base + reg->index * 8 + 4, 4);
