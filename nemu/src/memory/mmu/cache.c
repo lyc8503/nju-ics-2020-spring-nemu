@@ -1,4 +1,5 @@
 #include "memory/mmu/cache.h"
+#include "memory/memory.h"
 
 
 #define LINE_SIZE 8
