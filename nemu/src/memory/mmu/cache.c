@@ -1,7 +1,6 @@
 #include "memory/mmu/cache.h"
 #include "memory/memory.h"
 
-
 #define LINE_SIZE 8
 #define BLOCK_SIZE 8
 #define CACHE_SIZE 1024
@@ -42,17 +41,28 @@ void cache_write(paddr_t paddr, size_t len, uint32_t data)
 // read data from cache
 uint32_t cache_read(paddr_t paddr, size_t len)
 {
+
     uint32_t t = paddr / (128 * 1024 * 1024 / CACHE_SIZE);
     CACHE_BLOCK b = cache.blocks[t];
 
     uint32_t hit_flag = 0;
-    uint32_t data = 0;
+    uint32_t ret = 0;
 
     for (int i = 0; i < BLOCK_SIZE; i++) {
         if (paddr >= b.lines[i].addr && paddr + len < b.lines[i].addr + LINE_SIZE) {
             hit_flag = 1;
-            for (int j = 0; j < len; j++) {
-                data |= (b.lines[i].d.data[paddr - b.lines[i].addr] << (j - 1) * 8);
+            switch (len) {
+                case 4:
+                    ret = *((uint32*) b.lines[i].d.data + paddr - b.lines[i].addr);
+                    break;
+                case 2:
+                    ret = *((uint16*) b.lines[i].d.data + paddr - b.lines[i].addr);
+                    break;
+                case 1:
+                    ret = *((uint8*) b.lines[i].d.data + paddr - b.lines[i].addr);
+                    break;
+                default:
+                    assert(0);
             }
             break;
         }
@@ -60,27 +70,23 @@ uint32_t cache_read(paddr_t paddr, size_t len)
 
     // cache miss
     if (!hit_flag) {
-        // hw read
-        uint32_t data = hw_mem_read(paddr, 4);
-//        uint32_t data2 = hw_mem_read(paddr + 1, 4);
-
         // cache
-//        for (int i = 0; i < BLOCK_SIZE; i++) {
-//            if (b.lines[i].addr == 0xffffffff) {
-//                break;
-//            }
-//        }
-//
-//        if (i < BLOCK_SIZE) {
-//            // not full
-//            b.lines[i].addr == paddr;
-//            b.lines[i].DATA32[0] == ;
-//        } else {
-//            // full
-//
-//        }
+        int i = 0;
+        for (; i < BLOCK_SIZE; i++) {
+            if (b.lines[i].addr == 0xffffffff) {
+                break;
+            }
+        }
+
+        if (i < BLOCK_SIZE) {
+            // not full
+            memcpy(b.lines[i].data, hw_mem + paddr, 8);
+            b.lines[i].addr = paddr;
+        } else {
+            // full
+        }
     }
 
-	return data;
+	return ret;
 }
 
