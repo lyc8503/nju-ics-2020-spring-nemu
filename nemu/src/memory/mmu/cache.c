@@ -75,25 +75,27 @@ uint32_t cache_read(paddr_t paddr, size_t len) {
             trace_cache("cache hit");
 
             hit_flag = 1;
-            switch (len) {
-                case 4:
-                    ret |= b->lines[i].data[paddr - b->lines[i].addr];
-                    ret |= b->lines[i].data[paddr - b->lines[i].addr + 1] << 8;
-                    ret |= b->lines[i].data[paddr - b->lines[i].addr + 2] << 16;
-                    ret |= b->lines[i].data[paddr - b->lines[i].addr + 3] << 24;
-//                    ret = *((uint32_t *) b->lines[i].data + paddr - b->lines[i].addr);
-                    break;
-                case 2:
-                    ret = b->lines[i].data[paddr - b->lines[i].addr] & 0xff;
-                    ret = b->lines[i].data[paddr - b->lines[i].addr + 1] & 0xff00;
-//                    ret = *((uint16_t *) b->lines[i].data + paddr - b->lines[i].addr);
-                    break;
-                case 1:
-                    ret = *((uint8_t *) b->lines[i].data + paddr - b->lines[i].addr);
-                    break;
-                default:
-                    assert(0);
-            }
+
+            memcpy(&ret, &lines[i].data[paddr - b->lines[i].addr], len);
+//            switch (len) {
+//                case 4:
+//                    ret |= b->lines[i].data[paddr - b->lines[i].addr];
+//                    ret |= b->lines[i].data[paddr - b->lines[i].addr + 1] << 8;
+//                    ret |= b->lines[i].data[paddr - b->lines[i].addr + 2] << 16;
+//                    ret |= b->lines[i].data[paddr - b->lines[i].addr + 3] << 24;
+////                    ret = *((uint32_t *) b->lines[i].data + paddr - b->lines[i].addr);
+//                    break;
+//                case 2:
+//                    ret = b->lines[i].data[paddr - b->lines[i].addr] & 0xff;
+//                    ret = b->lines[i].data[paddr - b->lines[i].addr + 1] & 0xff00;
+////                    ret = *((uint16_t *) b->lines[i].data + paddr - b->lines[i].addr);
+//                    break;
+//                case 1:
+//                    ret = *((uint8_t *) b->lines[i].data + paddr - b->lines[i].addr);
+//                    break;
+//                default:
+//                    assert(0);
+//            }
             break;
         }
     }
