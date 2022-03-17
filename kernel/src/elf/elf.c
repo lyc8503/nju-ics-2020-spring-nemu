@@ -36,16 +36,8 @@ uint32_t loader()
 	{
 		if (ph->p_type == PT_LOAD)
 		{
-		    memcpy((void*) ph->p_vaddr, (void*) ph->p_offset, ph->p_memsz);
-
-//		    for (uint32_t i = 0; i < ph->p_memsz; i++) {
-//		        if (i < ph->p_filesz) {
-//
-//		            paddr_write(ph->p_vaddr + i, 1, paddr_read(ph->p_offset + i, 1));
-//		        } else {
-//		            paddr_write(ph->p_vaddr + i, 1, 0);
-//		        }
-//		    }
+		    memcpy((void*) ph->p_vaddr, (void*) ph->p_offset, ph->p_filesz);
+		    memset((void*) (ph->p_vaddr + ph->p_filesz), 0,  p_memsz - p_filesz);
 /* TODO: copy the segment from the ELF file to its proper memory area */
 
 /* TODO: zeror the memory area [vaddr + file_sz, vaddr + mem_sz) */
