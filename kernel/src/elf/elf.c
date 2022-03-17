@@ -36,8 +36,8 @@ uint32_t loader()
 	{
 		if (ph->p_type == PT_LOAD)
 		{
-		    memcpy(ph->p_vaddr, ph->p_offset, ph->p_memsz);
-		    
+		    memcpy((void*) ph->p_vaddr, (void*) ph->p_offset, ph->p_memsz);
+
 //		    for (uint32_t i = 0; i < ph->p_memsz; i++) {
 //		        if (i < ph->p_filesz) {
 //
