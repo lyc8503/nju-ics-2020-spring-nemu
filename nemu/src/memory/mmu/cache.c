@@ -53,13 +53,13 @@ uint32_t cache_read(paddr_t paddr, size_t len)
             hit_flag = 1;
             switch (len) {
                 case 4:
-                    ret = *((uint32_t*) b.lines[i].d.data + paddr - b.lines[i].addr);
+                    ret = *((uint32_t*) b.lines[i].data + paddr - b.lines[i].addr);
                     break;
                 case 2:
-                    ret = *((uint16_t*) b.lines[i].d.data + paddr - b.lines[i].addr);
+                    ret = *((uint16_t*) b.lines[i].data + paddr - b.lines[i].addr);
                     break;
                 case 1:
-                    ret = *((uint8_t*) b.lines[i].d.data + paddr - b.lines[i].addr);
+                    ret = *((uint8_t*) b.lines[i].data + paddr - b.lines[i].addr);
                     break;
                 default:
                     assert(0);
