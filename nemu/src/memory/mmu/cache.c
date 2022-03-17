@@ -50,7 +50,7 @@ void cache_write(paddr_t paddr, size_t len, uint32_t data) {
     CACHE_BLOCK* b = &cache.blocks[t];
 
     for (int i = 0; i < BLOCK_SIZE; i++) {
-        if (paddr >= b.lines[i].addr && paddr + len < b.lines[i].addr + LINE_SIZE) {
+        if (paddr >= b->lines[i].addr && paddr + len < b->lines[i].addr + LINE_SIZE) {
             b.lines[i].addr = 0xffffffff;
         }
     }
