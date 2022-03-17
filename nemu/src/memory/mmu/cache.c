@@ -72,6 +72,8 @@ uint32_t cache_read(paddr_t paddr, size_t len) {
     uint32_t ret = 0;
 
     for (int i = 0; i < BLOCK_SIZE; i++) {
+        trace_cache("%d %x", i, b.lines[i].addr);
+
         if (paddr >= b.lines[i].addr && paddr + len < b.lines[i].addr + LINE_SIZE) {
             trace_cache("cache hit");
 
