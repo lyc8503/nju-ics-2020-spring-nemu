@@ -77,10 +77,10 @@ uint32_t cache_read(paddr_t paddr, size_t len) {
             hit_flag = 1;
             switch (len) {
                 case 4:
-                    ret = b->lines[i].data[paddr - b->lines[i].addr] & 0xff000000;
-                    ret = b->lines[i].data[paddr - b->lines[i].addr + 1] & 0xff0000;
-                    ret = b->lines[i].data[paddr - b->lines[i].addr + 2] & 0xff00;
-                    ret = b->lines[i].data[paddr - b->lines[i].addr + 3] & 0xff;
+                    ret |= b->lines[i].data[paddr - b->lines[i].addr];
+                    ret |= b->lines[i].data[paddr - b->lines[i].addr + 1] << 8;
+                    ret |= b->lines[i].data[paddr - b->lines[i].addr + 2] << 16;
+                    ret |= b->lines[i].data[paddr - b->lines[i].addr + 3] << 24;
 //                    ret = *((uint32_t *) b->lines[i].data + paddr - b->lines[i].addr);
                     break;
                 case 2:
@@ -112,7 +112,7 @@ uint32_t cache_read(paddr_t paddr, size_t len) {
             // not full
             memcpy(b->lines[i].data, hw_mem + paddr, LINE_SIZE);
             b->lines[i].addr = paddr;
-            trace_cache("not full %x %x", i, b->lines[i].addr);
+            trace_cache("not full %d %x", i, b->lines[i].addr);
         } else {
             // full
 
