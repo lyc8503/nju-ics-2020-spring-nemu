@@ -13,3 +13,15 @@ make_instr_func(call_instr) {
     cpu.eip = (cpu.eip + 1 + data_size / 8 + rel);
     return 0;
 }
+
+
+make_instr_func(call_instr_indirect) {
+
+    OPERAND rm;
+    modrm_rm(eip + 1, &rm);
+
+    cpu.esp -= data_size / 8;
+    paddr_write(cpu.esp, data_size / 8, cpu.eip + 1 + data_size / 8);
+    cpu.eip = (cpu.eip + 1 + data_size / 8 + rm.val);
+    return 0;
+}
