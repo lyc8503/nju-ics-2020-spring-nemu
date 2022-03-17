@@ -16,9 +16,9 @@ void load_sreg(uint8_t sreg)
 	/* TODO: load the invisibile part of the segment register 'sreg' by reading the GDT.
 	 * The visible part of 'sreg' should be assigned by mov or ljmp already.
 	 */
-
-	SegDesc *seg0 = (void*) cpu.gdtr.base;
-	SegDesc *seg = &seg0[cpu.segReg[sreg].index];
+	SegDesc seg;
+	seg.val[0] = paddr_read(cpu.gdtr.base + cpu.segReg[sreg].index * 8, 4);
+	seg.val[1] = paddr_read(cpu.gdtr.base + cpu.segReg[sreg].index * 8 + 4, 4);
 
 	SegReg *reg = &cpu.segReg[sreg];
 
