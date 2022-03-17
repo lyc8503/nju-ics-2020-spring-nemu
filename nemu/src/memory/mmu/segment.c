@@ -22,7 +22,7 @@ void load_sreg(uint8_t sreg)
 	seg.val[0] = paddr_read(cpu.gdtr.base + reg->index * 8, 4);
 	seg.val[1] = paddr_read(cpu.gdtr.base + reg->index * 8 + 4, 4);
 
-	printf("load sreg data %8x %8x", seg.val[0], seg.val[1]);
+	printf("load sreg data %8x %8x\n", seg.val[0], seg.val[1]);
 
 	reg->base = seg.base_15_0 | (seg.base_23_16 << 16) | (seg.base_31_24) << 24;
 	reg->limit = seg.limit_15_0 | (seg.limit_19_16) << 16;
