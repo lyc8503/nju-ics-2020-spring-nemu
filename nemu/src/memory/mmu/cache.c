@@ -42,18 +42,18 @@ void init_cache() {
 // write data to cache
 void cache_write(paddr_t paddr, size_t len, uint32_t data) {
 
-//    trace_cache("write paddr %x len %d data %x", paddr, len, data);
-//
-//    assert(len == 1 || len == 2 || len == 4);
-//
-//    uint32_t t = paddr / (128 * 1024 * 1024 / CACHE_SIZE);
-//    CACHE_BLOCK b = cache.blocks[t];
-//
-//    for (int i = 0; i < BLOCK_SIZE; i++) {
-//        if (paddr >= b.lines[i].addr && paddr + len < b.lines[i].addr + LINE_SIZE) {
-//            b.lines[i].addr = 0xffffffff;
-//        }
-//    }
+    trace_cache("write paddr %x len %d data %x", paddr, len, data);
+
+    assert(len == 1 || len == 2 || len == 4);
+
+    uint32_t t = paddr / (128 * 1024 * 1024 / CACHE_SIZE);
+    CACHE_BLOCK b = cache.blocks[t];
+
+    for (int i = 0; i < BLOCK_SIZE; i++) {
+        if (paddr >= b.lines[i].addr && paddr + len < b.lines[i].addr + LINE_SIZE) {
+            b.lines[i].addr = 0xffffffff;
+        }
+    }
 
     memcpy(hw_mem + paddr, &data, len);
 }
@@ -73,6 +73,8 @@ uint32_t cache_read(paddr_t paddr, size_t len) {
 
     for (int i = 0; i < BLOCK_SIZE; i++) {
         if (paddr >= b.lines[i].addr && paddr + len < b.lines[i].addr + LINE_SIZE) {
+            trace_cache("cache hit");
+
             hit_flag = 1;
             switch (len) {
                 case 4:
