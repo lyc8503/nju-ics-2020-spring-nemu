@@ -96,6 +96,9 @@ uint32_t cache_read(paddr_t paddr, size_t len) {
                 break;
             }
         }
+        if (i == BLOCK_SIZE) {
+            i -= 1;
+        }
 
         if (i < BLOCK_SIZE) {
             // not full
