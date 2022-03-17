@@ -63,7 +63,7 @@ uint32_t cache_read(paddr_t paddr, size_t len)
     // cache miss
     if (!hit_flag) {
         // hw read
-        uint32_t data = hw_mem_read(paddr, 4);
+        data = hw_mem_read(paddr, 4);
 //        uint32_t data2 = hw_mem_read(paddr + 1, 4);
 
         // cache
