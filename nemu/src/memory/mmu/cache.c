@@ -3,13 +3,13 @@
 
 //#define DEBUG
 
-//#ifdef DEBUG
-//#define trace_cache(format, args...) do {                   \
-//printf("[CACHE:%d] " format "\n", __LINE__, ##args);        \
-//} while(0)
-//#else
+#ifdef DEBUG
+#define trace_cache(format, args...) do {                   \
+printf("[CACHE:%d] " format "\n", __LINE__, ##args);        \
+} while(0)
+#else
 #define trace_cache(format, args...) ((void)0)
-//#endif
+#endif
 
 #define LINE_SIZE 8
 #define BLOCK_SIZE 8
