@@ -19,6 +19,7 @@ make_instr_func(call_instr_indirect) {
 
     OPERAND rm;
     int len = modrm_rm(eip + 1, &rm);
+    operand_read(&rm);
 
     cpu.esp -= data_size / 8;
     paddr_write(cpu.esp, data_size / 8, cpu.eip + 1 + len);
