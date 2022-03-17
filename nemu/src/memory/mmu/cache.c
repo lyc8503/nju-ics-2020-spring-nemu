@@ -46,8 +46,8 @@ void cache_write(paddr_t paddr, size_t len, uint32_t data) {
 
     assert(len == 1 || len == 2 || len == 4);
 
-    uint32_t t = paddr / (128 * 1024 * 1024 / CACHE_SIZE);
-    CACHE_BLOCK b = cache.blocks[t];
+//    uint32_t t = paddr / (128 * 1024 * 1024 / CACHE_SIZE);
+//    CACHE_BLOCK b = cache.blocks[t];
 
 //    for (int i = 0; i < BLOCK_SIZE; i++) {
 //        if (paddr >= b.lines[i].addr && paddr + len < b.lines[i].addr + LINE_SIZE) {
