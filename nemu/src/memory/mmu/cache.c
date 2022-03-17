@@ -6,10 +6,7 @@
 #define CACHE_SIZE 1024
 
 typedef struct CACHE_LINE {
-    union DATA {
-        uint8_t data[LINE_SIZE];
-        uint32_t data32[LINE_SIZE / 4];
-    } d;
+    uint8_t data[LINE_SIZE];
     uint32_t addr;
 } CACHE_LINE;
 
@@ -63,7 +60,7 @@ uint32_t cache_read(paddr_t paddr, size_t len)
     // cache miss
     if (!hit_flag) {
         // hw read
-        data = hw_mem_read(paddr, 4);
+        uint32_t data = hw_mem_read(paddr, 4);
 //        uint32_t data2 = hw_mem_read(paddr + 1, 4);
 
         // cache
