@@ -1,6 +1,16 @@
 #include "memory/mmu/cache.h"
 #include "memory/memory.h"
 
+#define DEBUG
+
+#ifdef DEBUG
+#define trace_cache(format, args...) do {                   \
+printf("[CACHE:%d] " format "\n", __LINE__, ##args);        \
+} while(0)
+#else
+#define trace_cache(format, args...) ((void)0)
+#endif
+
 #define LINE_SIZE 8
 #define BLOCK_SIZE 8
 #define CACHE_SIZE 1024
@@ -32,6 +42,8 @@ void init_cache() {
 // write data to cache
 void cache_write(paddr_t paddr, size_t len, uint32_t data) {
 
+    trace_cache("write paddr %x len %d data %x", paddr, len, data);
+
     assert(len == 1 || len == 2 || len == 4);
 
     uint32_t t = paddr / (128 * 1024 * 1024 / CACHE_SIZE);
@@ -48,6 +60,8 @@ void cache_write(paddr_t paddr, size_t len, uint32_t data) {
 
 // read data from cache
 uint32_t cache_read(paddr_t paddr, size_t len) {
+
+    trace_cache("read paddr %x len %d", paddr, len);
 
     uint32_t t = paddr / (128 * 1024 * 1024 / CACHE_SIZE);
     CACHE_BLOCK b = cache.blocks[t];
