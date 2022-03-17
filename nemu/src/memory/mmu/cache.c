@@ -1,7 +1,7 @@
 #include "memory/mmu/cache.h"
 
 #define CACHE_BLOCK_SIZE 64
-#define CACHE_BLOCK_NUM 1024;
+#define CACHE_BLOCK_NUM 1024
 
 uint8_t l1cache[CACHE_BLOCK_NUM][CACHE_BLOCK_SIZE];
 uint8_t valid_bits[CACHE_BLOCK_NUM];
