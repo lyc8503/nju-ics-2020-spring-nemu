@@ -100,7 +100,7 @@ uint32_t cache_read(paddr_t paddr, size_t len) {
 
         if (i == BLOCK_SIZE) {
             // full, replace random
-            i = rand();
+            i = rand() % BLOCK_SIZE;
         }
 
         memcpy(b->lines[i].data, hw_mem + paddr, LINE_SIZE);
