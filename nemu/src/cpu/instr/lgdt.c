@@ -33,7 +33,7 @@ make_instr_func(lgdt_instr) {
 
     cpu.gdtr.base = m.val;
 
-    trace_instr("lgdt base %x", m.val);
+    trace_instr("lgdt base %x limit %x", m.val, cpu.gdtr.limit);
 
     return 1 + len;
 }
