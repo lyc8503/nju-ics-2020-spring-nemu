@@ -28,5 +28,7 @@ void load_sreg(uint8_t sreg)
 	reg->privilege_level = seg.privilege_level;
 	reg->soft_use = seg.soft_use;
 
-//	assert(reg->base == 0 && reg->limit == 1 && seg.granularity == 1);
+	printf("load sreg %d %d %d", reg->base, reg->limit, seg.granularity);
+
+	assert(reg->base == 0 && reg->limit == 1 && seg.granularity == 1);
 }
