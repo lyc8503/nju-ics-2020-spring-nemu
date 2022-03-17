@@ -31,7 +31,7 @@ typedef struct L1CACHE {
 L1CACHE cache;
 
 
-uint32_t hw_mem_read(paddr_t paddr, size_t len)
+uint32_t hw_mem_read_(paddr_t paddr, size_t len)
 {
     uint32_t ret = 0;
     memcpy(&ret, hw_mem + paddr, len);
@@ -109,7 +109,7 @@ uint32_t cache_read(paddr_t paddr, size_t len) {
         return cache_read(paddr, len);
     }
 
-    trace_cache("read got %x expect %x", ret, hw_mem_read(paddr, len));
+    trace_cache("read got %x expect %x", ret, hw_mem_read_(paddr, len));
 
     return ret;
 }
