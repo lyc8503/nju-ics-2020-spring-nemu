@@ -95,8 +95,8 @@ typedef struct
 	} eflags;
 
 #ifdef IA32_SEG
-	GDTR gdtr; // GDTR, todo: define type GDTR
-	// segment registers, todo: define type SegReg
+	GDTR gdtr; // GDTR
+	// segment registers
 	union {
 		SegReg segReg[6];
 		struct
@@ -104,7 +104,7 @@ typedef struct
 			SegReg es, cs, ss, ds, fs, gs;
 		};
 	};
-	// control registers, todo: define type CR0
+	// control registers
 	CR0 cr0;
 #else
 	uint8_t dummy_seg[142]; // make __ref_ instructions safe to use
