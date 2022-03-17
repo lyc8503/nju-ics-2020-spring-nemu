@@ -64,7 +64,7 @@ make_instr_func(jmp_far_imm) {
     operand_read(&rel);
 
     cpu.segReg[1].val = rel.val;
-//    load_sreg(1);
+    load_sreg(1);
 
 //    cpu.cs.val = paddr_read(cpu.eip + 5, 2);
 //    cpu.eip = paddr_read(cpu.eip + 1, 4);
