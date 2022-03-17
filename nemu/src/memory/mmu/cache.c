@@ -76,7 +76,7 @@ uint32_t cache_read(paddr_t paddr, size_t len) {
 
             hit_flag = 1;
 
-            memcpy(&ret, &lines[i].data[paddr - b->lines[i].addr], len);
+            memcpy(&ret, &b->lines[i].data[paddr - b->lines[i].addr], len);
 //            switch (len) {
 //                case 4:
 //                    ret |= b->lines[i].data[paddr - b->lines[i].addr];
