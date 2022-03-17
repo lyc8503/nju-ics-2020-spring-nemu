@@ -18,8 +18,8 @@ make_instr_func(lgdt_instr) {
     cpu.gdtr.base = paddr_read(cpu.eip + 3, 4);
 //    OPERAND m;
 //    m.data_size = 16;
-    int len = 1;
-    len += modrm_rm(eip + 1, &m);
+//    int len = 1;
+//    len += modrm_rm(eip + 1, &m);
 //    operand_read(&m);
 //    cpu.gdtr.limit = m.val;
 //
@@ -31,6 +31,6 @@ make_instr_func(lgdt_instr) {
 
     trace_instr("lgdt base %x limit %x", m.val, cpu.gdtr.limit);
 
-    return 1 + len;
+    return 6;
 }
 
