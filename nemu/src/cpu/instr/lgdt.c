@@ -8,7 +8,7 @@ Put the implementations of `lgdt' instructions here.
 
 make_instr_func(lgdt_instr) {
 
-//    OPERAND m;
+    OPERAND m;
 //    m.data_size = data_size;
 //    int len = modrm_rm(cpu.eip + 1, &m);
 //
