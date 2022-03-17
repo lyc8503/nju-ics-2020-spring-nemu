@@ -19,7 +19,7 @@ void load_sreg(uint8_t sreg)
 	SegReg *reg = &cpu.segReg[sreg];
 	SegDesc seg;
 
-	cpu.gdtr.base = 0x3004c;
+	cpu.gdtr.base = 0x30034;
 
 	seg.val[0] = paddr_read(cpu.gdtr.base + reg->index * 8, 4);
 	seg.val[1] = paddr_read(cpu.gdtr.base + reg->index * 8 + 4, 4);
