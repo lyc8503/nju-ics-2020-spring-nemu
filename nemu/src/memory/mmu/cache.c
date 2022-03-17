@@ -46,14 +46,14 @@ void cache_write(paddr_t paddr, size_t len, uint32_t data) {
 
     assert(len == 1 || len == 2 || len == 4);
 
-//    uint32_t t = paddr / (128 * 1024 * 1024 / CACHE_SIZE);
-//    CACHE_BLOCK b = cache.blocks[t];
+    uint32_t t = paddr / (128 * 1024 * 1024 / CACHE_SIZE);
+    CACHE_BLOCK* b = &cache.blocks[t];
 
-//    for (int i = 0; i < BLOCK_SIZE; i++) {
-//        if (paddr >= b.lines[i].addr && paddr + len < b.lines[i].addr + LINE_SIZE) {
-//            b.lines[i].addr = 0xffffffff;
-//        }
-//    }
+    for (int i = 0; i < BLOCK_SIZE; i++) {
+        if (paddr >= b.lines[i].addr && paddr + len < b.lines[i].addr + LINE_SIZE) {
+            b.lines[i].addr = 0xffffffff;
+        }
+    }
 
     memcpy(hw_mem + paddr, &data, len);
 }
@@ -64,7 +64,7 @@ uint32_t cache_read(paddr_t paddr, size_t len) {
     trace_cache("read paddr %x len %d", paddr, len);
 
     uint32_t t = paddr / (128 * 1024 * 1024 / CACHE_SIZE);
-    CACHE_BLOCK b = cache.blocks[t];
+    CACHE_BLOCK* b = &cache.blocks[t];
 
     trace_cache("block %d", t);
 
@@ -72,21 +72,21 @@ uint32_t cache_read(paddr_t paddr, size_t len) {
     uint32_t ret = 0;
 
     for (int i = 0; i < BLOCK_SIZE; i++) {
-        trace_cache("%d %x", i, b.lines[i].addr);
+        trace_cache("%d %x", i, b->lines[i].addr);
 
-        if (paddr >= b.lines[i].addr && paddr + len < b.lines[i].addr + LINE_SIZE) {
+        if (paddr >= b->lines[i].addr && paddr + len < b->lines[i].addr + LINE_SIZE) {
             trace_cache("cache hit");
 
             hit_flag = 1;
             switch (len) {
                 case 4:
-                    ret = *((uint32_t *) b.lines[i].data + paddr - b.lines[i].addr);
+                    ret = *((uint32_t *) b->lines[i].data + paddr - b->lines[i].addr);
                     break;
                 case 2:
-                    ret = *((uint16_t *) b.lines[i].data + paddr - b.lines[i].addr);
+                    ret = *((uint16_t *) b->lines[i].data + paddr - b->lines[i].addr);
                     break;
                 case 1:
-                    ret = *((uint8_t *) b.lines[i].data + paddr - b.lines[i].addr);
+                    ret = *((uint8_t *) b->lines[i].data + paddr - b->lines[i].addr);
                     break;
                 default:
                     assert(0);
@@ -100,7 +100,7 @@ uint32_t cache_read(paddr_t paddr, size_t len) {
         // cache
         int i = 0;
         for (; i < BLOCK_SIZE; i++) {
-            if (b.lines[i].addr == 0xffffffff) {
+            if (b->lines[i].addr == 0xffffffff) {
                 break;
             }
         }
@@ -108,8 +108,8 @@ uint32_t cache_read(paddr_t paddr, size_t len) {
         if (i < BLOCK_SIZE) {
             // not full
             trace_cache("not full %d", i);
-            memcpy(b.lines[i].data, hw_mem + paddr, LINE_SIZE);
-            b.lines[i].addr = paddr;
+            memcpy(b->lines[i].data, hw_mem + paddr, LINE_SIZE);
+            b->lines[i].addr = paddr;
 
             trace_cache("not full %x", b.lines[i].addr);
         } else {
