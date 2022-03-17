@@ -111,7 +111,7 @@ uint32_t cache_read(paddr_t paddr, size_t len) {
             memcpy(b->lines[i].data, hw_mem + paddr, LINE_SIZE);
             b->lines[i].addr = paddr;
 
-            trace_cache("not full %x", b.lines[i].addr);
+            trace_cache("not full %x", b->lines[i].addr);
         } else {
             // full
 
