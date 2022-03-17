@@ -66,7 +66,7 @@ uint32_t cache_read(paddr_t paddr, size_t len) {
     uint32_t t = paddr / (128 * 1024 * 1024 / CACHE_SIZE);
     CACHE_BLOCK b = cache.blocks[t];
 
-    trace_cache("block %d", b);
+    trace_cache("block %d", t);
 
     uint32_t hit_flag = 0;
     uint32_t ret = 0;
