@@ -4,8 +4,8 @@
 
 //#define DEBUG
 
-int counter = 0;
-int ori = 0;
+//int counter = 0;
+//int ori = 0;
 
 #ifdef DEBUG
 #define trace_cache(format, args...) do {                   \
@@ -72,9 +72,9 @@ void cache_write(paddr_t paddr, size_t len, uint32_t data) {
 // read data from cache
 uint32_t cache_read(paddr_t paddr, size_t len) {
 
-    printf("before %d, after %d\n", ori, counter);
+//    printf("before %d, after %d\n", ori, counter);
 
-    ori += 10;
+//    ori += 10;
 
     trace_cache("read paddr %x len %d", paddr, len);
 
@@ -88,7 +88,7 @@ uint32_t cache_read(paddr_t paddr, size_t len) {
 
     for (int i = 0; i < BLOCK_SIZE; i++) {
         if (paddr >= b->lines[i].addr && paddr + len < b->lines[i].addr + LINE_SIZE) {
-            counter += 1;
+//            counter += 1;
             trace_cache("cache hit");
             hit_flag = 1;
             memcpy(&ret, &b->lines[i].data[paddr - b->lines[i].addr], len);
@@ -98,7 +98,7 @@ uint32_t cache_read(paddr_t paddr, size_t len) {
 
     // cache miss
     if (!hit_flag) {
-        counter += 10;
+//        counter += 10;
         // cache
         int i = 0;
         for (; i < BLOCK_SIZE; i++) {
