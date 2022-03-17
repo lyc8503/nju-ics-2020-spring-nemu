@@ -16,14 +16,18 @@ void load_sreg(uint8_t sreg)
 	/* TODO: load the invisibile part of the segment register 'sreg' by reading the GDT.
 	 * The visible part of 'sreg' should be assigned by mov or ljmp already.
 	 */
+	SegReg *reg = &cpu.segReg[sreg];
 	SegDesc seg;
 
-	printf("load sreg index %d\n", cpu.segReg[sreg].index);
+	printf("load sreg index %d\n", reg->index);
 
-	seg.val[0] = paddr_read(cpu.gdtr.base + cpu.segReg[sreg].index * 8 + 1, 4);
-	seg.val[1] = paddr_read(cpu.gdtr.base + cpu.segReg[sreg].index * 8 + 5, 4);
 
-	SegReg *reg = &cpu.segReg[sreg];
+	printf("load sreg dbg %x %x %x %x", paddr_read(cpu.gdtr.base, 4),
+           paddr_read(cpu.gdtr.base + 4, 4),paddr_read(cpu.gdtr.base + 8, 4),paddr_read(cpu.gdtr.base + 12, 4));
+
+	seg.val[0] = paddr_read(cpu.gdtr.base + reg->index * 8, 4);
+	seg.val[1] = paddr_read(cpu.gdtr.base + reg->index * 8, 4);
+
 
 	reg->base = seg.base_15_0 | (seg.base_23_16 << 16) | (seg.base_31_24) << 24;
 	reg->limit = seg.limit_15_0 | (seg.limit_19_16) << 16;
@@ -31,7 +35,7 @@ void load_sreg(uint8_t sreg)
 	reg->privilege_level = seg.privilege_level;
 	reg->soft_use = seg.soft_use;
 
-	printf("load sreg %d %d %d\n", reg->base, reg->limit, seg.granularity);
+	printf("load base sreg limit %d granu %d %d\n", reg->base, reg->limit, seg.granularity);
 
 	assert(reg->base == 0 && reg->limit == 1 && seg.granularity == 1);
 }
