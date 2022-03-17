@@ -21,8 +21,7 @@ typedef struct L1CACHE {
 L1CACHE cache;
 
 // init the cache
-void init_cache()
-{
+void init_cache() {
     for (int i = 0; i < CACHE_SIZE; i++) {
         for (int j = 0; j < BLOCK_SIZE; j++) {
             cache.blocks[i].lines[j].addr = 0xffffffff;
@@ -31,16 +30,24 @@ void init_cache()
 }
 
 // write data to cache
-void cache_write(paddr_t paddr, size_t len, uint32_t data)
-{
+void cache_write(paddr_t paddr, size_t len, uint32_t data) {
 
+    assert(len == 1 || len == 2 || len == 4);
 
-	// implement me in PA 3-1
+    uint32_t t = paddr / (128 * 1024 * 1024 / CACHE_SIZE);
+    CACHE_BLOCK b = cache.blocks[t];
+
+    for (int i = 0; i < BLOCK_SIZE; i++) {
+        if (paddr >= b.lines[i].addr && paddr + len < b.lines[i].addr + LINE_SIZE) {
+            b.lines[i].addr = 0xffffffff;
+        }
+    }
+
+    memcpy(hw_mem + paddr, &data, len);
 }
 
 // read data from cache
-uint32_t cache_read(paddr_t paddr, size_t len)
-{
+uint32_t cache_read(paddr_t paddr, size_t len) {
 
     uint32_t t = paddr / (128 * 1024 * 1024 / CACHE_SIZE);
     CACHE_BLOCK b = cache.blocks[t];
@@ -53,13 +60,13 @@ uint32_t cache_read(paddr_t paddr, size_t len)
             hit_flag = 1;
             switch (len) {
                 case 4:
-                    ret = *((uint32_t*) b.lines[i].data + paddr - b.lines[i].addr);
+                    ret = *((uint32_t *) b.lines[i].data + paddr - b.lines[i].addr);
                     break;
                 case 2:
-                    ret = *((uint16_t*) b.lines[i].data + paddr - b.lines[i].addr);
+                    ret = *((uint16_t *) b.lines[i].data + paddr - b.lines[i].addr);
                     break;
                 case 1:
-                    ret = *((uint8_t*) b.lines[i].data + paddr - b.lines[i].addr);
+                    ret = *((uint8_t *) b.lines[i].data + paddr - b.lines[i].addr);
                     break;
                 default:
                     assert(0);
@@ -87,6 +94,6 @@ uint32_t cache_read(paddr_t paddr, size_t len)
         }
     }
 
-	return ret;
+    return ret;
 }
 
