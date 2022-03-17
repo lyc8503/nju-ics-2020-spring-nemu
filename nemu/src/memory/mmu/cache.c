@@ -44,7 +44,7 @@ void cache_write(paddr_t paddr, size_t len, uint32_t data)
 // read data from cache
 uint32_t cache_read(paddr_t paddr, size_t len)
 {
-    uint32_t t = paddr / (MEM_SIZE_B / CACHE_SIZE);
+    uint32_t t = paddr / (128 * 1024 * 1024 / CACHE_SIZE);
     CACHE_BLOCK b = cache.blocks[t];
 
     uint32_t hit_flag = 0;
