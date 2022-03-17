@@ -96,19 +96,15 @@ uint32_t cache_read(paddr_t paddr, size_t len) {
                 break;
             }
         }
+
         if (i == BLOCK_SIZE) {
-            i -= 1;
+            // full, replace random
+            i = rand();
         }
 
-        if (i < BLOCK_SIZE) {
-            // not full
-            memcpy(b->lines[i].data, hw_mem + paddr, LINE_SIZE);
-            b->lines[i].addr = paddr;
-            trace_cache("not full %d %x", i, b->lines[i].addr);
-        } else {
-            // full
-
-        }
+        memcpy(b->lines[i].data, hw_mem + paddr, LINE_SIZE);
+        b->lines[i].addr = paddr;
+        trace_cache("not full %d %x", i, b->lines[i].addr);
         return cache_read(paddr, len);
     }
 
