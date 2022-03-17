@@ -84,7 +84,8 @@ uint32_t cache_read(paddr_t paddr, size_t len) {
 //                    ret = *((uint32_t *) b->lines[i].data + paddr - b->lines[i].addr);
                     break;
                 case 2:
-
+                    ret = b->lines[i].data[paddr - b->lines[i].addr] & 0xff;
+                    ret = b->lines[i].data[paddr - b->lines[i].addr + 1] & 0xff00;
 //                    ret = *((uint16_t *) b->lines[i].data + paddr - b->lines[i].addr);
                     break;
                 case 1:
