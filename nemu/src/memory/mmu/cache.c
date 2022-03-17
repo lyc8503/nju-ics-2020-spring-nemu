@@ -108,6 +108,8 @@ uint32_t cache_read(paddr_t paddr, size_t len) {
         }
     }
 
+    trace_cache("read got %x", ret);
+
     return ret;
 }
 

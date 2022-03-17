@@ -1,0 +1,189 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="SELECTIVE" />
+  </component>
+  <component name="CMakeRunConfigurationManager" shouldGenerate="true" shouldDeleteObsolete="true">
+    <generated />
+  </component>
+  <component name="CMakeSettings">
+    <configurations>
+      <configuration PROFILE_NAME="Debug" ENABLED="true" CONFIG_NAME="Debug" />
+    </configurations>
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="ec0ec4b6-6559-43a2-bd61-2c44b8107726" name="更改" comment="finish pa-2-1.">
+      <change afterPath="$PROJECT_DIR$/.idea/.gitignore" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/deployment.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/icspa-public.iml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/inspectionProfiles/Project_Default.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/inspectionProfiles/profiles_settings.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/modules.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/sonarlint/issuestore/index.pb" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Makefile" beforeDir="false" afterPath="$PROJECT_DIR$/Makefile" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Makefile.git" beforeDir="false" afterPath="$PROJECT_DIR$/Makefile.git" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/game/Makefile" beforeDir="false" afterPath="$PROJECT_DIR$/game/Makefile" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/game/include/adt/linklist.h" beforeDir="false" afterPath="$PROJECT_DIR$/game/include/adt/linklist.h" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/game/include/common.h" beforeDir="false" afterPath="$PROJECT_DIR$/game/include/common.h" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/game/include/debug.h" beforeDir="false" afterPath="$PROJECT_DIR$/game/include/debug.h" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/game/include/device/audio.h" beforeDir="false" afterPath="$PROJECT_DIR$/game/include/device/audio.h" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/game/include/device/palette.h" beforeDir="false" afterPath="$PROJECT_DIR$/game/include/device/palette.h" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/game/include/device/video.h" beforeDir="false" afterPath="$PROJECT_DIR$/game/include/device/video.h" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/game/include/game-common.h" beforeDir="false" afterPath="$PROJECT_DIR$/game/include/game-common.h" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/game/include/x86.h" beforeDir="false" afterPath="$PROJECT_DIR$/game/include/x86.h" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/game/src/common/device/audio.c" beforeDir="false" afterPath="$PROJECT_DIR$/game/src/common/device/audio.c" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/game/src/common/device/font.c" beforeDir="false" afterPath="$PROJECT_DIR$/game/src/common/device/font.c" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/game/src/common/device/palette.c" beforeDir="false" afterPath="$PROJECT_DIR$/game/src/common/device/palette.c" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/game/src/common/device/timer.c" beforeDir="false" afterPath="$PROJECT_DIR$/game/src/common/device/timer.c" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/game/src/common/device/video.c" beforeDir="false" afterPath="$PROJECT_DIR$/game/src/common/device/video.c" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/game/src/common/lib/syscall.c" beforeDir="false" afterPath="$PROJECT_DIR$/game/src/common/lib/syscall.c" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/game/src/common/main.c" beforeDir="false" afterPath="$PROJECT_DIR$/game/src/common/main.c" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/game/src/credits/credits.c" beforeDir="false" afterPath="$PROJECT_DIR$/game/src/credits/credits.c" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/game/src/credits/keyboard.c" beforeDir="false" afterPath="$PROJECT_DIR$/game/src/credits/keyboard.c" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/game/src/credits/rolling.c" beforeDir="false" afterPath="$PROJECT_DIR$/game/src/credits/rolling.c" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/game/src/nemu-pal/CREDITS.txt" beforeDir="false" afterPath="$PROJECT_DIR$/game/src/nemu-pal/CREDITS.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/game/src/nemu-pal/README.txt" beforeDir="false" afterPath="$PROJECT_DIR$/game/src/nemu-pal/README.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/game/src/nemu-pal/battle/battle.c" beforeDir="false" afterPath="$PROJECT_DIR$/game/src/nemu-pal/battle/battle.c" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/game/src/nemu-pal/battle/fight.c" beforeDir="false" afterPath="$PROJECT_DIR$/game/src/nemu-pal/battle/fight.c" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/game/src/nemu-pal/device/input.c" beforeDir="false" afterPath="$PROJECT_DIR$/game/src/nemu-pal/device/input.c" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/game/src/nemu-pal/device/palette.c" beforeDir="false" afterPath="$PROJECT_DIR$/game/src/nemu-pal/device/palette.c" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/game/src/nemu-pal/device/video.c" beforeDir="false" afterPath="$PROJECT_DIR$/game/src/nemu-pal/device/video.c" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/game/src/nemu-pal/game/game.c" beforeDir="false" afterPath="$PROJECT_DIR$/game/src/nemu-pal/game/game.c" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/game/src/nemu-pal/game/play.c" beforeDir="false" afterPath="$PROJECT_DIR$/game/src/nemu-pal/game/play.c" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/game/src/nemu-pal/game/script.c" beforeDir="false" afterPath="$PROJECT_DIR$/game/src/nemu-pal/game/script.c" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/game/src/nemu-pal/global/global.c" beforeDir="false" afterPath="$PROJECT_DIR$/game/src/nemu-pal/global/global.c" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/game/src/nemu-pal/global/palcommon.c" beforeDir="false" afterPath="$PROJECT_DIR$/game/src/nemu-pal/global/palcommon.c" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/game/src/nemu-pal/global/res.c" beforeDir="false" afterPath="$PROJECT_DIR$/game/src/nemu-pal/global/res.c" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/game/src/nemu-pal/gpl.txt" beforeDir="false" afterPath="$PROJECT_DIR$/game/src/nemu-pal/gpl.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/game/src/nemu-pal/hal/keyboard.c" beforeDir="false" afterPath="$PROJECT_DIR$/game/src/nemu-pal/hal/keyboard.c" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/game/src/nemu-pal/hal/timer.c" beforeDir="false" afterPath="$PROJECT_DIR$/game/src/nemu-pal/hal/timer.c" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/game/src/nemu-pal/hal/video.c" beforeDir="false" afterPath="$PROJECT_DIR$/game/src/nemu-pal/hal/video.c" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/game/src/nemu-pal/include/_common.h" beforeDir="false" afterPath="$PROJECT_DIR$/game/src/nemu-pal/include/_common.h" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/game/src/nemu-pal/include/ascii.h" beforeDir="false" afterPath="$PROJECT_DIR$/game/src/nemu-pal/include/ascii.h" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/game/src/nemu-pal/include/battle.h" beforeDir="false" afterPath="$PROJECT_DIR$/game/src/nemu-pal/include/battle.h" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/game/src/nemu-pal/include/big5font.h" beforeDir="false" afterPath="$PROJECT_DIR$/game/src/nemu-pal/include/big5font.h" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/game/src/nemu-pal/include/ending.h" beforeDir="false" afterPath="$PROJECT_DIR$/game/src/nemu-pal/include/ending.h" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/game/src/nemu-pal/include/fight.h" beforeDir="false" afterPath="$PROJECT_DIR$/game/src/nemu-pal/include/fight.h" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/game/src/nemu-pal/include/font.h" beforeDir="false" afterPath="$PROJECT_DIR$/game/src/nemu-pal/include/font.h" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/game/src/nemu-pal/include/game.h" beforeDir="false" afterPath="$PROJECT_DIR$/game/src/nemu-pal/include/game.h" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/game/src/nemu-pal/include/gbfont.h" beforeDir="false" afterPath="$PROJECT_DIR$/game/src/nemu-pal/include/gbfont.h" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/game/src/nemu-pal/include/getopt.h" beforeDir="false" afterPath="$PROJECT_DIR$/game/src/nemu-pal/include/getopt.h" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/game/src/nemu-pal/include/global.h" beforeDir="false" afterPath="$PROJECT_DIR$/game/src/nemu-pal/include/global.h" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/game/src/nemu-pal/include/hal.h" beforeDir="false" afterPath="$PROJECT_DIR$/game/src/nemu-pal/include/hal.h" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/game/src/nemu-pal/include/input.h" beforeDir="false" afterPath="$PROJECT_DIR$/game/src/nemu-pal/include/input.h" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/game/src/nemu-pal/include/itemmenu.h" beforeDir="false" afterPath="$PROJECT_DIR$/game/src/nemu-pal/include/itemmenu.h" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/game/src/nemu-pal/include/magicmenu.h" beforeDir="false" afterPath="$PROJECT_DIR$/game/src/nemu-pal/include/magicmenu.h" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/game/src/nemu-pal/include/main.h" beforeDir="false" afterPath="$PROJECT_DIR$/game/src/nemu-pal/include/main.h" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/game/src/nemu-pal/include/main_PSP.h" beforeDir="false" afterPath="$PROJECT_DIR$/game/src/nemu-pal/include/main_PSP.h" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/game/src/nemu-pal/include/map.h" beforeDir="false" afterPath="$PROJECT_DIR$/game/src/nemu-pal/include/map.h" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/game/src/nemu-pal/include/midi.h" beforeDir="false" afterPath="$PROJECT_DIR$/game/src/nemu-pal/include/midi.h" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/game/src/nemu-pal/include/palcommon.h" beforeDir="false" afterPath="$PROJECT_DIR$/game/src/nemu-pal/include/palcommon.h" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/game/src/nemu-pal/include/palette.h" beforeDir="false" afterPath="$PROJECT_DIR$/game/src/nemu-pal/include/palette.h" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/game/src/nemu-pal/include/play.h" beforeDir="false" afterPath="$PROJECT_DIR$/game/src/nemu-pal/include/play.h" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/game/src/nemu-pal/include/res.h" beforeDir="false" afterPath="$PROJECT_DIR$/game/src/nemu-pal/include/res.h" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/game/src/nemu-pal/include/rixplay.h" beforeDir="false" afterPath="$PROJECT_DIR$/game/src/nemu-pal/include/rixplay.h" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/game/src/nemu-pal/include/rngplay.h" beforeDir="false" afterPath="$PROJECT_DIR$/game/src/nemu-pal/include/rngplay.h" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/game/src/nemu-pal/include/scene.h" beforeDir="false" afterPath="$PROJECT_DIR$/game/src/nemu-pal/include/scene.h" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/game/src/nemu-pal/include/script.h" beforeDir="false" afterPath="$PROJECT_DIR$/game/src/nemu-pal/include/script.h" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/game/src/nemu-pal/include/sound.h" beforeDir="false" afterPath="$PROJECT_DIR$/game/src/nemu-pal/include/sound.h" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/game/src/nemu-pal/include/text.h" beforeDir="false" afterPath="$PROJECT_DIR$/game/src/nemu-pal/include/text.h" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/game/src/nemu-pal/include/ui.h" beforeDir="false" afterPath="$PROJECT_DIR$/game/src/nemu-pal/include/ui.h" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/game/src/nemu-pal/include/uibattle.h" beforeDir="false" afterPath="$PROJECT_DIR$/game/src/nemu-pal/include/uibattle.h" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/game/src/nemu-pal/include/uigame.h" beforeDir="false" afterPath="$PROJECT_DIR$/game/src/nemu-pal/include/uigame.h" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/game/src/nemu-pal/include/util.h" beforeDir="false" afterPath="$PROJECT_DIR$/game/src/nemu-pal/include/util.h" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/game/src/nemu-pal/include/video.h" beforeDir="false" afterPath="$PROJECT_DIR$/game/src/nemu-pal/include/video.h" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/game/src/nemu-pal/main.c" beforeDir="false" afterPath="$PROJECT_DIR$/game/src/nemu-pal/main.c" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/game/src/nemu-pal/misc/ending.c" beforeDir="false" afterPath="$PROJECT_DIR$/game/src/nemu-pal/misc/ending.c" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/game/src/nemu-pal/misc/rngplay.c" beforeDir="false" afterPath="$PROJECT_DIR$/game/src/nemu-pal/misc/rngplay.c" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/game/src/nemu-pal/misc/util.c" beforeDir="false" afterPath="$PROJECT_DIR$/game/src/nemu-pal/misc/util.c" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/game/src/nemu-pal/misc/yj1.c" beforeDir="false" afterPath="$PROJECT_DIR$/game/src/nemu-pal/misc/yj1.c" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/game/src/nemu-pal/scene/map.c" beforeDir="false" afterPath="$PROJECT_DIR$/game/src/nemu-pal/scene/map.c" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/game/src/nemu-pal/scene/scene.c" beforeDir="false" afterPath="$PROJECT_DIR$/game/src/nemu-pal/scene/scene.c" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/game/src/nemu-pal/ui/font.c" beforeDir="false" afterPath="$PROJECT_DIR$/game/src/nemu-pal/ui/font.c" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/game/src/nemu-pal/ui/itemmenu.c" beforeDir="false" afterPath="$PROJECT_DIR$/game/src/nemu-pal/ui/itemmenu.c" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/game/src/nemu-pal/ui/magicmenu.c" beforeDir="false" afterPath="$PROJECT_DIR$/game/src/nemu-pal/ui/magicmenu.c" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/game/src/nemu-pal/ui/text.c" beforeDir="false" afterPath="$PROJECT_DIR$/game/src/nemu-pal/ui/text.c" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/game/src/nemu-pal/ui/ui.c" beforeDir="false" afterPath="$PROJECT_DIR$/game/src/nemu-pal/ui/ui.c" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/game/src/nemu-pal/ui/uibattle.c" beforeDir="false" afterPath="$PROJECT_DIR$/game/src/nemu-pal/ui/uibattle.c" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/game/src/nemu-pal/ui/uigame.c" beforeDir="false" afterPath="$PROJECT_DIR$/game/src/nemu-pal/ui/uigame.c" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/game/src/nemu-pal/unuse/midi.c" beforeDir="false" afterPath="$PROJECT_DIR$/game/src/nemu-pal/unuse/midi.c" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/game/src/nemu-pal/unuse/rixplay.c" beforeDir="false" afterPath="$PROJECT_DIR$/game/src/nemu-pal/unuse/rixplay.c" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/game/src/nemu-pal/unuse/sdl.c" beforeDir="false" afterPath="$PROJECT_DIR$/game/src/nemu-pal/unuse/sdl.c" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/game/src/nemu-pal/unuse/sound.c" beforeDir="false" afterPath="$PROJECT_DIR$/game/src/nemu-pal/unuse/sound.c" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/game/src/typing/draw.c" beforeDir="false" afterPath="$PROJECT_DIR$/game/src/typing/draw.c" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/game/src/typing/effect.c" beforeDir="false" afterPath="$PROJECT_DIR$/game/src/typing/effect.c" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/game/src/typing/game.c" beforeDir="false" afterPath="$PROJECT_DIR$/game/src/typing/game.c" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/game/src/typing/include/game.h" beforeDir="false" afterPath="$PROJECT_DIR$/game/src/typing/include/game.h" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/game/src/typing/keyboard.c" beforeDir="false" afterPath="$PROJECT_DIR$/game/src/typing/keyboard.c" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/include/config.h" beforeDir="false" afterPath="$PROJECT_DIR$/include/config.h" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/include/trap.h" beforeDir="false" afterPath="$PROJECT_DIR$/include/trap.h" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/kernel/Makefile" beforeDir="false" afterPath="$PROJECT_DIR$/kernel/Makefile" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/kernel/include/common.h" beforeDir="false" afterPath="$PROJECT_DIR$/kernel/include/common.h" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/kernel/include/debug.h" beforeDir="false" afterPath="$PROJECT_DIR$/kernel/include/debug.h" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/kernel/include/memory.h" beforeDir="false" afterPath="$PROJECT_DIR$/kernel/include/memory.h" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/kernel/include/x86.h" beforeDir="false" afterPath="$PROJECT_DIR$/kernel/include/x86.h" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/kernel/include/x86/cpu.h" beforeDir="false" afterPath="$PROJECT_DIR$/kernel/include/x86/cpu.h" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/kernel/include/x86/io.h" beforeDir="false" afterPath="$PROJECT_DIR$/kernel/include/x86/io.h" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/kernel/include/x86/memory.h" beforeDir="false" afterPath="$PROJECT_DIR$/kernel/include/x86/memory.h" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/kernel/src/driver/ide/cache.c" beforeDir="false" afterPath="$PROJECT_DIR$/kernel/src/driver/ide/cache.c" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/kernel/src/driver/ide/disk.c" beforeDir="false" afterPath="$PROJECT_DIR$/kernel/src/driver/ide/disk.c" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/kernel/src/driver/ide/dma.c" beforeDir="false" afterPath="$PROJECT_DIR$/kernel/src/driver/ide/dma.c" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/kernel/src/driver/ide/dma.h" beforeDir="false" afterPath="$PROJECT_DIR$/kernel/src/driver/ide/dma.h" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/kernel/src/driver/ide/ide.c" beforeDir="false" afterPath="$PROJECT_DIR$/kernel/src/driver/ide/ide.c" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/kernel/src/elf/elf.c" beforeDir="false" afterPath="$PROJECT_DIR$/kernel/src/elf/elf.c" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/kernel/src/fs/fs.c" beforeDir="false" afterPath="$PROJECT_DIR$/kernel/src/fs/fs.c" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/kernel/src/irq/do_irq.S" beforeDir="false" afterPath="$PROJECT_DIR$/kernel/src/irq/do_irq.S" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/kernel/src/irq/i8259.c" beforeDir="false" afterPath="$PROJECT_DIR$/kernel/src/irq/i8259.c" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/kernel/src/irq/idt.c" beforeDir="false" afterPath="$PROJECT_DIR$/kernel/src/irq/idt.c" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/kernel/src/irq/irq_handle.c" beforeDir="false" afterPath="$PROJECT_DIR$/kernel/src/irq/irq_handle.c" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/kernel/src/lib/misc.c" beforeDir="false" afterPath="$PROJECT_DIR$/kernel/src/lib/misc.c" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/kernel/src/lib/printk.c" beforeDir="false" afterPath="$PROJECT_DIR$/kernel/src/lib/printk.c" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/kernel/src/lib/serial.c" beforeDir="false" afterPath="$PROJECT_DIR$/kernel/src/lib/serial.c" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/kernel/src/main.c" beforeDir="false" afterPath="$PROJECT_DIR$/kernel/src/main.c" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/kernel/src/memory/kvm.c" beforeDir="false" afterPath="$PROJECT_DIR$/kernel/src/memory/kvm.c" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/kernel/src/memory/mm.c" beforeDir="false" afterPath="$PROJECT_DIR$/kernel/src/memory/mm.c" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/kernel/src/memory/vmem.c" beforeDir="false" afterPath="$PROJECT_DIR$/kernel/src/memory/vmem.c" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/kernel/src/syscall/do_syscall.c" beforeDir="false" afterPath="$PROJECT_DIR$/kernel/src/syscall/do_syscall.c" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/kernel/start/start.S" beforeDir="false" afterPath="$PROJECT_DIR$/kernel/start/start.S" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/libs/nemu-ref/include/cpu-ref/alu_ref.h" beforeDir="false" afterPath="$PROJECT_DIR$/libs/nemu-ref/include/cpu-ref/alu_ref.h" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/libs/nemu-ref/include/cpu-ref/fpu_ref.h" beforeDir="false" afterPath="$PROJECT_DIR$/libs/nemu-ref/include/cpu-ref/fpu_ref.h" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/libs/nemu-ref/include/cpu-ref/instr_helper_ref.h" beforeDir="false" afterPath="$PROJECT_DIR$/libs/nemu-ref/include/cpu-ref/instr_helper_ref.h" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/libs/nemu-ref/include/cpu-ref/instr_ref.h" beforeDir="false" afterPath="$PROJECT_DIR$/libs/nemu-ref/include/cpu-ref/instr_ref.h" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/libs/nemu-ref/include/scoring.h" beforeDir="false" afterPath="$PROJECT_DIR$/libs/nemu-ref/include/scoring.h" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/libs/nemu-ref/include/test/reg_alu_fpu_test_score.h" beforeDir="false" afterPath="$PROJECT_DIR$/libs/nemu-ref/include/test/reg_alu_fpu_test_score.h" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/libs/newlib/include/_ansi.h" beforeDir="false" afterPath="$PROJECT_DIR$/libs/newlib/include/_ansi.h" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/libs/newlib/include/_syslist.h" beforeDir="false" afterPath="$PROJECT_DIR$/libs/newlib/include/_syslist.h" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/libs/newlib/include/alloca.h" beforeDir="false" afterPath="$PROJECT_DIR$/libs/newlib/include/alloca.h" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/libs/newlib/include/ar.h" beforeDir="false" afterPath="$PROJECT_DIR$/libs/newlib/include/ar.h" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/libs/newlib/include/argz.h" beforeDir="false" afterPath="$PROJECT_DIR$/libs/newlib/include/argz.h" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/libs/newlib/include/assert.h" beforeDir="false" afterPath="$PROJECT_DIR$/libs/newlib/include/assert.h" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/libs/newlib/include/complex.h" beforeDir="false" afterPath="$PROJECT_DIR$/libs/newlib/include/complex.h" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/libs/newlib/include/ctype.h" beforeDir="false" afterPath="$PROJECT_DIR$/libs/newlib/include/ctype.h" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/libs/newlib/include/dirent.h" beforeDir="false" afterPath="$PROJECT_DIR$/libs/newlib/include/dirent.h" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/libs/newlib/include/envlock.h" beforeDir="false" afterPath="$PROJECT_DIR$/libs/newlib/include/envlock.h" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/libs/newlib/include/envz.h" beforeDir="false" afterPath="$PROJECT_DIR$/libs/newlib/include/envz.h" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/libs/newlib/include/errno.h" beforeDir="false" afterPath="$PROJECT_DIR$/libs/newlib/include/errno.h" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/libs/newlib/include/fastmath.h" beforeDir="false" afterPath="$PROJECT_DIR$/libs/newlib/include/fastmath.h" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/libs/newlib/include/fcntl.h" beforeDir="false" afterPath="$PROJECT_DIR$/libs/newlib/include/fcntl.h" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/libs/newlib/include/fnmatch.h" beforeDir="false" afterPath="$PROJECT_DIR$/libs/newlib/include/fnmatch.h" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/libs/newlib/include/getopt.h" beforeDir="false" afterPath="$PROJECT_DIR$/libs/newlib/include/getopt.h" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/libs/newlib/include/glob.h" beforeDir="false" afterPath="$PROJECT_DIR$/libs/newlib/include/glob.h" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/libs/newlib/include/grp.h" beforeDir="false" afterPath="$PROJECT_DIR$/libs/newlib/include/grp.h" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/libs/newlib/include/iconv.h" beforeDir="false" afterPath="$PROJECT_DIR$/libs/newlib/include/iconv.h" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/libs/newlib/include/ieeefp.h" beforeDir="false" afterPath="$PROJECT_DIR$/libs/newlib/include/ieeefp.h" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/libs/newlib/include/inttypes.h" beforeDir="false" afterPath="$PROJECT_DIR$/libs/newlib/include/inttypes.h" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/libs/newlib/include/langinfo.h" beforeDir="false" afterPath="$PROJECT_DIR$/libs/newlib/include/langinfo.h" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/libs/newlib/include/libgen.h" beforeDir="false" afterPath="$PROJECT_DIR$/libs/newlib/include/libgen.h" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/libs/newlib/include/limits.h" beforeDir="false" afterPath="$PROJECT_DIR$/libs/newlib/include/limits.h" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/libs/newlib/include/locale.h" beforeDir="false" afterPath="$PROJECT_DIR$/libs/newlib/include/locale.h" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/libs/newlib/include/machine/_default_types.h" beforeDir="false" afterPath="$PROJECT_DIR$/libs/newlib/include/machine/_default_types.h" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/libs/newlib/include/machine/_types.h" beforeDir="false" afterPath="$PROJECT_DIR$/libs/newlib/include/machine/_types.h" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/libs/newlib/include/machine/ansi.h" beforeDir="false" afterPath="$PROJECT_DIR$/libs/newlib/include/machine/ansi.h" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/libs/newlib/include/machine/endian.h" beforeDir="false" afterPath="$PROJECT_DIR$/libs/newlib/include/machine/endian.h" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/libs/newlib/include/machine/fastmath.h" beforeDir="false" afterPath="$PROJECT_DIR$/libs/newlib/include/machine/fastmath.h" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/libs/newlib/include/machine/ieeefp.h" beforeDir="false" afterPath="$PROJECT_DIR$/libs/newlib/include/machine/ieeefp.h" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/libs/newlib/include/machine/malloc.h" beforeDir="false" afterPath="$PROJECT_DIR$/libs/newlib/include/machine/malloc.h" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/libs/newlib/include/machine/param.h" beforeDir="false" afterPat
