@@ -49,8 +49,8 @@ make_instr_func(jmp_near_indirect) {
 
 make_instr_func(jmp_far_imm) {
 
-    cpu.cs.val = paddr_read(eip + 5, 2);
-    cpu.eip = paddr_read(eip + 1, 4);
+    cpu.cs.val = paddr_read(cpu.eip + 5, 2);
+    cpu.eip = paddr_read(cpu.eip + 1, 4);
 
     load_sreg(1);
     return 0;
