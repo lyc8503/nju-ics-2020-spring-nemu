@@ -4,4 +4,6 @@
 Put the declarations of `leave' instructions here.
 */
 
+make_instr_func(leave_instr);
+
 #endif

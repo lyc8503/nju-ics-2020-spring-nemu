@@ -7,6 +7,16 @@
 #include <stdio.h>
 #include <assert.h>
 
+#define DEBUG
+
+#ifdef DEBUG
+#define trace_cpu(format, args...) do {                        \
+printf("[CPU:%d] " format "\n", __LINE__, ##args);             \
+} while(0)
+#else
+#define trace_cpu(format, args...) ((void)0)
+#endif
+
 CPU_STATE cpu;
 extern FPU fpu;
 int nemu_state;
@@ -127,13 +137,14 @@ int exec_inst()
 	uint8_t opcode = 0;
 	// get the opcode
 	opcode = instr_fetch(cpu.eip, 1);
-//printf("opcode = %x, eip = %x\n", opcode, cpu.eip);
+//    trace_cpu("opcode = %x, eip = %x", opcode, cpu.eip);
 // instruction decode and execution
 #ifdef NEMU_REF_INSTR
 	int len = __ref_opcode_entry[opcode](cpu.eip, opcode);
 #else
 	int len = opcode_entry[opcode](cpu.eip, opcode);
 #endif
+//	trace_cpu("opcode = %x, eip = %x, len = %d", opcode, cpu.eip, len);
 	return len;
 }
 

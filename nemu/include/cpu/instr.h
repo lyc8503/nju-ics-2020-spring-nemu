@@ -1,6 +1,17 @@
 #ifndef __INSTRUCTIONS_H__
 #define __INSTRUCTIONS_H__
 
+#define DEBUG
+
+#ifdef DEBUG
+#define trace_instr(format, args...) do {                        \
+printf("[INSTR:%d] " format "\n", __LINE__, ##args);             \
+} while(0)
+#else
+#define trace_instr(format, args...) ((void)0)
+#endif
+
+
 #include "nemu.h"
 #include "cpu/cpu.h"
 #include "cpu/fpu.h"
