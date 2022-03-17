@@ -3,7 +3,7 @@
 
 #include "nemu.h"
 
-
+#ifdef IA32_SEG
 typedef struct {
     uint32_t limit :16;
     uint32_t base :32;
@@ -41,6 +41,7 @@ typedef struct {
         uint32_t soft_use :1;
     };
 }SegReg;
+#endif
 
 // define the structure of registers
 typedef struct
