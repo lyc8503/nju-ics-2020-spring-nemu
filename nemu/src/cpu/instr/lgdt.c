@@ -15,7 +15,7 @@ make_instr_func(lgdt_instr) {
 
     cpu.gdtr.limit = paddr_read(m.val, 2);
     cpu.gdtr.base = paddr_read(m.val, 4);
-    
+
     return len + 1;
 }
 
