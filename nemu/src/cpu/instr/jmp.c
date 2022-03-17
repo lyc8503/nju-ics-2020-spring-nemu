@@ -48,27 +48,9 @@ make_instr_func(jmp_near_indirect) {
 }
 
 make_instr_func(jmp_far_imm) {
-    OPERAND rel;
-    rel.type = OPR_IMM;
-    rel.sreg = SREG_CS;
-    rel.data_size = data_size;
-    rel.addr = eip + 1;
+    cpu.cs.val = paddr_read(cpu.eip + 5, 2);
+    cpu.eip = paddr_read(cpu.eip + 1, 4);
 
-    operand_read(&rel);
-
-    cpu.eip = rel.val;
-
-    rel.data_size = 16;
-    rel.addr += data_size / 8;
-
-    operand_read(&rel);
-
-    cpu.segReg[1].val = rel.val;
     load_sreg(1);
-
-//    cpu.cs.val = paddr_read(cpu.eip + 5, 2);
-//    cpu.eip = paddr_read(cpu.eip + 1, 4);
-
-//    load_sreg(1);
     return 0;
 }
