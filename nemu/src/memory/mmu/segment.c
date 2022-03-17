@@ -26,7 +26,7 @@ void load_sreg(uint8_t sreg)
            paddr_read(cpu.gdtr.base + 4, 4),paddr_read(cpu.gdtr.base + 8, 4),paddr_read(cpu.gdtr.base + 12, 4));
 
 	seg.val[0] = paddr_read(cpu.gdtr.base + reg->index * 8, 4);
-	seg.val[1] = paddr_read(cpu.gdtr.base + reg->index * 8, 4);
+	seg.val[1] = paddr_read(cpu.gdtr.base + reg->index * 8 + 4, 4);
 
 
 	reg->base = seg.base_15_0 | (seg.base_23_16 << 16) | (seg.base_31_24) << 24;
