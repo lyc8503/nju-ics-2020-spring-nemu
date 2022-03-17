@@ -16,6 +16,8 @@ make_instr_func(lgdt_instr) {
 
 //    cpu.gdtr.limit = paddr_read(cpu.eip + 1, 2);
 //    cpu.gdtr.base = paddr_read(cpu.eip + 3, 4);
+
+    // TODO: why??
     OPERAND m;
     m.data_size = 16;
     int len = 1;

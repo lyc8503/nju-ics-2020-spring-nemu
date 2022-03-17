@@ -34,5 +34,5 @@ void load_sreg(uint8_t sreg)
 
 	printf("load sreg base %d limit %d granu %d \n", reg->base, reg->limit, seg.granularity);
 
-	assert(reg->base == 0 && reg->limit == 1 && seg.granularity == 1);
+	assert(reg->base == 0 && reg->limit == 0xffff && seg.granularity == 1);
 }
