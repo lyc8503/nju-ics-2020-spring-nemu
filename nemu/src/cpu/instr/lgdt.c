@@ -13,6 +13,6 @@ make_instr_func(lgdt_instr) {
 
     trace_instr("limit %x base %x", cpu.gdtr.limit, cpu.gdtr.base);
 
-    return 7;
+    return 6;
 }
 
