@@ -50,13 +50,25 @@ void laddr_write(laddr_t laddr, size_t len, uint32_t data)
 uint32_t vaddr_read(vaddr_t vaddr, uint8_t sreg, size_t len)
 {
 	assert(len == 1 || len == 2 || len == 4);
-	return laddr_read(vaddr, len);
+
+	if (cpu.cr0.pe) {
+	    uint32_t offset_ = segment_translate(vaddr, sreg);
+	    return laddr_read(offset, len, data);
+	} else {
+	    return laddr_read(vaddr, len, data);
+	}
 }
 
 void vaddr_write(vaddr_t vaddr, uint8_t sreg, size_t len, uint32_t data)
 {
 	assert(len == 1 || len == 2 || len == 4);
-	laddr_write(vaddr, len, data);
+
+	if (cpu.cr0.pe) {
+	    uint32_t offset_ = segment_translate(vaddr, sreg);
+	    laddr_write(offset, len, data);
+	} else {
+	    laddr_write(vaddr, len, data);
+	}
 }
 
 void init_mem()
