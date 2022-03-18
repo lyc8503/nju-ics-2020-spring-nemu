@@ -104,10 +104,11 @@ make_instr_func(mov_c2r_l) {
     int len = modrm_opcode_rm(eip + 1, &op, &m);
     operand_read(&m);
 
-    trace_instr("mov c2r %x to %d", m.addr, op);
+    trace_instr("mov c2r %x to %d", op, m.addr);
     assert(op == 0);
 
-
+    m.val = cpu.cr0.val;
+    operand_write(&m);
 
     return 1 + len;
 }
@@ -124,7 +125,7 @@ make_instr_func(mov_r2c_l) {
     trace_instr("mov r2c %x to %d", m.addr, op);
     assert(op == 0);
 
-
+    cpu.cr0.val = m.val;
 
     return 1 + len;
 }
