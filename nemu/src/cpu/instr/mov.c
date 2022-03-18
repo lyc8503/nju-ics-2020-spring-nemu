@@ -76,3 +76,14 @@ make_instr_func(mov_srm162r_l) {
 	print_asm_2("mov", "", len, &rm, &r);
         return len;
 }
+
+make_instr_func(mov_rm2s_w) {
+    OPERAND m;
+    uint8_t op;
+    int len = modrm_opcode_rm(eip + 1, &op, &m);
+    operand_read(&m);
+
+    trace_instr("mov special %x to %d", m.val, op);
+
+    return 1 + len;
+}
