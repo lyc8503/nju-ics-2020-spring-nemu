@@ -36,8 +36,6 @@ uint32_t loader()
 	{
 		if (ph->p_type == PT_LOAD)
 		{
-		    while(1);
-
 #ifdef IA32_PAGE
 		    nemu_assert(0);
 //		    uint32_t start_paddr = mm_malloc(ph->p_vaddr, ph->p_memsz);
