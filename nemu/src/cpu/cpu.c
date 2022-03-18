@@ -137,7 +137,7 @@ int exec_inst()
 	uint8_t opcode = 0;
 	// get the opcode
 	opcode = instr_fetch(cpu.eip, 1);
-    trace_cpu("opcode = %x, eip = %x", opcode, cpu.eip);
+//    trace_cpu("opcode = %x, eip = %x", opcode, cpu.eip);
 // instruction decode and execution
 #ifdef NEMU_REF_INSTR
 	int len = __ref_opcode_entry[opcode](cpu.eip, opcode);

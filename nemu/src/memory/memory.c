@@ -39,7 +39,7 @@ void paddr_write(paddr_t paddr, size_t len, uint32_t data) {
 
 uint32_t laddr_read(laddr_t laddr, size_t len)
 {
-    if (cpu.cr0.pg || laddr > 0x7ffffff) {
+    if (cpu.cr0.pg) {
         uint32_t offset_ = page_translate(laddr);
         return paddr_read(offset_, len);
     } else {
@@ -49,7 +49,7 @@ uint32_t laddr_read(laddr_t laddr, size_t len)
 
 void laddr_write(laddr_t laddr, size_t len, uint32_t data)
 {
-    if (cpu.cr0.pg || laddr > 0x7ffffff) {
+    if (cpu.cr0.pg) {
         uint32_t offset_ = page_translate(laddr);
         paddr_write(offset_, len, data);
     } else {
