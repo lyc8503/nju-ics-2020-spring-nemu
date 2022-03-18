@@ -61,7 +61,7 @@ uint32_t vaddr_read(vaddr_t vaddr, uint8_t sreg, size_t len)
 {
 	assert(len == 1 || len == 2 || len == 4);
 
-	printf("vaddr read %x\n", vaddr);
+//	printf("vaddr read %x\n", vaddr);
 	if (cpu.cr0.pe) {
 //	    printf("pe enabled read\n");
 	    uint32_t offset_ = segment_translate(vaddr, sreg);
@@ -75,7 +75,7 @@ void vaddr_write(vaddr_t vaddr, uint8_t sreg, size_t len, uint32_t data)
 {
 	assert(len == 1 || len == 2 || len == 4);
 
-	printf("vaddr write %x %x\n", vaddr, data);
+//	printf("vaddr write %x %x\n", vaddr, data);
 
 	if (cpu.cr0.pe) {
 //	    printf("pe enabled write\n");
