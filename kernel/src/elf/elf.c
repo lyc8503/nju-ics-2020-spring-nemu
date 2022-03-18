@@ -36,7 +36,7 @@ uint32_t loader()
 	{
 		if (ph->p_type == PT_LOAD)
 		{
-		    nemu_assert(0);
+		    while(1);
 
 #ifdef IA32_PAGE
 		    nemu_assert(0);
