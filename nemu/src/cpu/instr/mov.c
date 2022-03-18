@@ -126,6 +126,7 @@ make_instr_func(mov_r2c_l) {
     assert(op == 0);
 
     cpu.cr0.val = m.val;
+    trace_instr("mov r2c data %x", m.val);
 
     return 1 + len;
 }
