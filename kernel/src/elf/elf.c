@@ -38,6 +38,7 @@ uint32_t loader()
 		{
 
 #ifdef IA32_PAGE
+		    nemu_assert(0);
 //		    uint32_t start_paddr = mm_malloc(ph->p_vaddr, ph->p_memsz);
 //		    Log("%x", start_paddr);
 //		    memcpy((void*) start_paddr, (void*) ph->p_offset, ph->p_filesz);
