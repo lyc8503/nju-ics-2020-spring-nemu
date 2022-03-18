@@ -38,10 +38,11 @@ uint32_t loader()
 		{
 
 #ifdef IA32_PAGE
-		    uint32_t start_paddr = mm_malloc(ph->p_vaddr, ph->p_memsz);
-		    Log("%x", start_paddr);
-		    memcpy((void*) start_paddr, (void*) ph->p_offset, ph->p_filesz);
-		    memset((void*) (start_paddr + ph->p_filesz), 0,  ph->p_memsz - ph->p_filesz);
+		    Log("12345");
+//		    uint32_t start_paddr = mm_malloc(ph->p_vaddr, ph->p_memsz);
+//		    Log("%x", start_paddr);
+//		    memcpy((void*) start_paddr, (void*) ph->p_offset, ph->p_filesz);
+//		    memset((void*) (start_paddr + ph->p_filesz), 0,  ph->p_memsz - ph->p_filesz);
 #elif
 		    memcpy((void*) ph->p_vaddr, (void*) ph->p_offset, ph->p_filesz);
 		    memset((void*) (ph->p_vaddr + ph->p_filesz), 0,  ph->p_memsz - ph->p_filesz);
