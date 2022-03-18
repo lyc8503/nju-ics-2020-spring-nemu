@@ -22,6 +22,12 @@ typedef union {
     uint32_t val;
 }CR0;
 
+#ifdef IA32_PAGE
+typedef union {
+    uint32_t val;
+} CR3;
+#endif
+
 typedef struct {
     // the 16-bit visible part, i.e., the selector
     union {
@@ -42,6 +48,8 @@ typedef struct {
     };
 }SegReg;
 #endif
+
+
 
 // define the structure of registers
 typedef struct
