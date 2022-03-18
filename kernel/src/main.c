@@ -22,7 +22,6 @@ void init_cond();
 void init()
 {
 
-    nemu_assert(0);
 #ifdef IA32_PAGE
 	/* We must set up kernel virtual memory first because our kernel thinks it 
 	 * is located at 0xc0030000, which is set by the linking options in Makefile.
@@ -35,6 +34,8 @@ void init()
 				 : "i"(KOFFSET));
 #endif
 
+	nemu_assert(0);
+	
 /* Jump to init_cond() to continue initialization. */
 // need to plus the offset 0xc0000000 if using gcc-6, strange
 #ifdef IA32_PAGE
