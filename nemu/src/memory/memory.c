@@ -43,7 +43,7 @@ uint32_t laddr_read(laddr_t laddr, size_t len)
         uint32_t offset_ = page_translate(laddr);
         return paddr_read(offset_, len);
     } else {
-        return paddr_write(laddr, len, data);
+        return paddr_write(laddr, len);
     }
 }
 
