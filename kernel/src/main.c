@@ -21,6 +21,8 @@ void init_cond();
  */
 void init()
 {
+
+    nemu_assert(0);
 #ifdef IA32_PAGE
 	/* We must set up kernel virtual memory first because our kernel thinks it 
 	 * is located at 0xc0030000, which is set by the linking options in Makefile.
