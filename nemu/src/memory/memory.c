@@ -53,9 +53,9 @@ uint32_t vaddr_read(vaddr_t vaddr, uint8_t sreg, size_t len)
 
 	if (cpu.cr0.pe) {
 	    uint32_t offset_ = segment_translate(vaddr, sreg);
-	    return laddr_read(offset_, len, data);
+	    return laddr_read(offset_, len);
 	} else {
-	    return laddr_read(vaddr, len, data);
+	    return laddr_read(vaddr, len);
 	}
 }
 
