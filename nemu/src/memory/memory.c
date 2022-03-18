@@ -39,12 +39,22 @@ void paddr_write(paddr_t paddr, size_t len, uint32_t data) {
 
 uint32_t laddr_read(laddr_t laddr, size_t len)
 {
-	return paddr_read(laddr, len);
+    if (cpu.cr0.pg) {
+        uint32_t offset_ = page_translate(laddr);
+        return paddr_read(offset_, len);
+    } else {
+        return paddr_write(laddr, len, data);
+    }
 }
 
 void laddr_write(laddr_t laddr, size_t len, uint32_t data)
 {
-	paddr_write(laddr, len, data);
+    if (cpu.cr0.pg) {
+        uint32_t offset_ = page_translate(laddr);
+        paddr_write(offset_, len, data);
+    } else {
+        paddr_write(laddr, len, data);
+    }
 }
 
 uint32_t vaddr_read(vaddr_t vaddr, uint8_t sreg, size_t len)

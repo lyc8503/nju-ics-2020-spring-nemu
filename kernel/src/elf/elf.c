@@ -36,8 +36,18 @@ uint32_t loader()
 	{
 		if (ph->p_type == PT_LOAD)
 		{
+
+#ifdef IA32_PAGE
+		    uint32_t start_paddr = mm_malloc(ph->p_vaddr, ph->p_memsz);
+		    memcpy((void*) start_paddr, (void*) ph->p_offset, ph->p_filesz);
+		    memset((void*) (start_paddr + ph->p_filesz), 0,  ph->p_memsz - ph->p_filesz);
+#elif
 		    memcpy((void*) ph->p_vaddr, (void*) ph->p_offset, ph->p_filesz);
 		    memset((void*) (ph->p_vaddr + ph->p_filesz), 0,  ph->p_memsz - ph->p_filesz);
+#endif
+
+
+
 /* TODO: copy the segment from the ELF file to its proper memory area */
 
 /* TODO: zeror the memory area [vaddr + file_sz, vaddr + mem_sz) */
