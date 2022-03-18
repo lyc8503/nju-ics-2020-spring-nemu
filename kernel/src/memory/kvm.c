@@ -13,8 +13,7 @@ void init_page(void)
 {
 	CR0 cr0;
 	CR3 cr3;
-	PDE *pdir = kpdir;
-//	PDE *pdir = (PDE *)va_to_pa(kpdir);
+	PDE *pdir = (PDE *)va_to_pa(kpdir);
 	PTE *ptable = (PTE *)va_to_pa(kptable);
 	uint32_t pdir_idx, ptable_idx, pframe_idx;
 
