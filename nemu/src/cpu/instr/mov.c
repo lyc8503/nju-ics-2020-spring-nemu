@@ -106,6 +106,7 @@ make_instr_func(mov_c2r_l) {
 
     trace_instr("mov special %x to %d", m.val, op);
 
+    return 1 + len;
 }
 
 make_instr_func(mov_r2c_l) {
@@ -119,4 +120,5 @@ make_instr_func(mov_r2c_l) {
 
     trace_instr("mov special %x to %d", m.val, op);
 
+    return 1 + len;
 }
