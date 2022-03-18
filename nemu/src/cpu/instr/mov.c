@@ -123,9 +123,13 @@ make_instr_func(mov_r2c_l) {
     operand_read(&m);
 
     trace_instr("mov r2c %x to %d", m.addr, op);
-    assert(op == 0);
+    assert(op == 0 || op == 3);
+    if (op == 0) {
+        cpu.cr0.val = m.val;
+    } else if (op == 3) {
+        cpu.cr3.val = m.val;
+    }
 
-    cpu.cr0.val = m.val;
     trace_instr("mov r2c data %x", m.val);
 
     return 1 + len;
