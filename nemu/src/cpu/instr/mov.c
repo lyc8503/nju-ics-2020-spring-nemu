@@ -80,6 +80,9 @@ make_instr_func(mov_srm162r_l) {
 make_instr_func(mov_rm2s_w) {
     OPERAND m;
     uint8_t op;
+
+    m.data_size = data_size;
+
     int len = modrm_opcode_rm(eip + 1, &op, &m);
     operand_read(&m);
 
