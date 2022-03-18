@@ -88,5 +88,8 @@ make_instr_func(mov_rm2s_w) {
 
     trace_instr("mov special %x to %d", m.val, op);
 
+    cpu.segReg[op].val = m.val;
+    load_sreg(op);
+
     return 1 + len;
 }
