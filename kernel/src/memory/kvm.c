@@ -13,6 +13,7 @@ void init_page(void)
 {
 	CR0 cr0;
 	CR3 cr3;
+	Log("Test");
 	PDE *pdir = (PDE *)va_to_pa(kpdir);
 	PTE *ptable = (PTE *)va_to_pa(kptable);
 //	PDE *pdir = kpdir;
