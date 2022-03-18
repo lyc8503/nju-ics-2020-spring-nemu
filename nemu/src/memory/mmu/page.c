@@ -7,9 +7,11 @@ paddr_t page_translate(laddr_t laddr)
 #ifndef TLB_ENABLED
     PDE pde;
     pde.val = paddr_read(cpu.cr3.val + (laddr & 0xffe00000 >> 22) * 4, 4);
+    printf("page translate pde %x", pde.val);
     assert(pde.present);
     PTE pte;
     pte.val = paddr_read(pde.page_frame * 4096 + (laddr & 0x1ff800 >> 11) * 4, 4);
+    printf("page translate pte %x", pte.val);
     assert(pte.present);
     uint32_t paddr = pte.page_frame * 4096 + (laddr & 0x7ff);
     return paddr;
