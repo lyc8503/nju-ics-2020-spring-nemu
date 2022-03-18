@@ -4,7 +4,8 @@
 #include "common.h"
 
 #ifdef IA32_PAGE
-#define KOFFSET 0xC0000000
+//#define KOFFSET 0xC0000000
+#define KOFFSET 0
 #else
 #define KOFFSET 0
 #endif
