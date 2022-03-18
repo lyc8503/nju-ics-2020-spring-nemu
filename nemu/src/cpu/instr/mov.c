@@ -93,3 +93,30 @@ make_instr_func(mov_rm2s_w) {
 
     return 1 + len;
 }
+
+
+make_instr_func(mov_c2r_l) {
+    OPERAND m;
+    uint8_t op;
+
+    m.data_size = data_size;
+
+    int len = modrm_opcode_rm(eip + 1, &op, &m);
+    operand_read(&m);
+
+    trace_instr("mov special %x to %d", m.val, op);
+
+}
+
+make_instr_func(mov_r2c_l) {
+    OPERAND m;
+    uint8_t op;
+
+    m.data_size = data_size;
+
+    int len = modrm_opcode_rm(eip + 1, &op, &m);
+    operand_read(&m);
+
+    trace_instr("mov special %x to %d", m.val, op);
+
+}
