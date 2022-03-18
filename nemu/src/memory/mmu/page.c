@@ -11,7 +11,7 @@ paddr_t page_translate(laddr_t laddr)
     PTE pte;
     pte.val = paddr_read(pde.page_frame * 4096 + (laddr & 0x1ff800 >> 11) * 4, 4);
     assert(pte.present);
-    uint32_t paddr = pte.page_frame * 4096 + laddr & 0x7ff;
+    uint32_t paddr = pte.page_frame * 4096 + (laddr & 0x7ff);
     return paddr;
 #else
 	return tlb_read(laddr) | (laddr & PAGE_MASK);
