@@ -14,9 +14,10 @@ void init_page(void)
 	CR0 cr0;
 	CR3 cr3;
 	PDE *pdir = (PDE *)va_to_pa(kpdir);
-	Log("Hello!");
 	PTE *ptable = (PTE *)va_to_pa(kptable);
 	uint32_t pdir_idx, ptable_idx, pframe_idx;
+
+	Log(va_to_pa("Hello!"));
 
 	/* make all PDE invalid */
 	memset(pdir, 0, NR_PDE * sizeof(PDE));
