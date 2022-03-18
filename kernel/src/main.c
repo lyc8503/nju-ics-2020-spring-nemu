@@ -38,7 +38,7 @@ void init()
 #ifdef IA32_PAGE
 	asm volatile("jmp *%0"
 				 :
-				 : "r"(init_cond));
+				 : "r"(init_cond + 0xc0000000));
 #else
 	asm volatile("jmp *%0"
 				 :
