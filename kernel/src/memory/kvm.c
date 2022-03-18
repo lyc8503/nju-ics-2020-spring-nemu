@@ -17,6 +17,8 @@ void init_page(void)
 	PTE *ptable = (PTE *)va_to_pa(kptable);
 	uint32_t pdir_idx, ptable_idx, pframe_idx;
 
+	nemu_assert(0);
+
 	/* make all PDE invalid */
 	memset(pdir, 0, NR_PDE * sizeof(PDE));
 

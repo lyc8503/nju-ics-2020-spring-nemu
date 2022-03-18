@@ -34,8 +34,6 @@ void init()
 				 : "i"(KOFFSET));
 #endif
 
-	nemu_assert(0);
-	
 /* Jump to init_cond() to continue initialization. */
 // need to plus the offset 0xc0000000 if using gcc-6, strange
 #ifdef IA32_PAGE
