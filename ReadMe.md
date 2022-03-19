@@ -1,5 +1,7 @@
 完成所有必须任务并测试通过.
 
+心得: https://blog.lyc8503.site/post/nju-ics-pa-season1/
+
 ---
 
 本仓库是MOOC课程《计算机系统基础（五）：x86模拟器编程实践》的代码仓库
