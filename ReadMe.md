@@ -1,6 +1,6 @@
 完成所有必须任务并测试通过.
 
-心得: https://blog.lyc8503.site/post/nju-ics-pa-season1/
+心得: https://blog.lyc8503.net/post/nju-ics-pa-season1/
 
 ---
 
